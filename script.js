@@ -60,7 +60,7 @@ map.on('load', () => {
         // extract properties we want to build the HTML string
         const coordinates = e.features[0].geometry.coordinates.slice(); // get the coordinates of the hovered-over location
         const description = e.features[0].properties.placeName; // extract the place name of this location
-        const ecosystems = JSON.parse(e.features[0].properties.ecosystems); // extract the list of ecosystems for this location
+        const ecosystems = JSON.parse(e.features[0].properties.ecosystems); // extract the list of ecosystems for this location, JSONparse because it is a JSON array but has been loaded by AJAX as an unparsed string
         const unilinked = e.features[0].properties.universityLinked; // whether the location is university-linked
 
         // build the HTML that will be dynamically appended to the popup
@@ -75,7 +75,7 @@ map.on('load', () => {
             formattedHTML += entry + ', '
         });
 
-        formattedHTML = formattedHTML.replace(/,\s*$/, ""); // remove trailing comma
+        formattedHTML = formattedHTML.replace(/,\s*$/, ""); // remove trailing comma with regex
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears

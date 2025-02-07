@@ -28,7 +28,7 @@ map.on('load', () => {
         'type': 'circle',
         'source': 'fs-data',
         'paint': {
-            'circle-radius': 4,
+            'circle-radius': ['interpolate', ['linear'], ['zoom'], 4, 4, 15, 10, 22, 15], /* make the dot get bigger as the zoom level increases */
             'circle-color': '#9326ff'
         }
     });

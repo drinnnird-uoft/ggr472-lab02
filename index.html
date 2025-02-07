@@ -9,6 +9,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css' rel='stylesheet' />
+    
+    <!-- include site-specific styles -->
     <link href="style.css" rel="stylesheet" />
     <title>Lab 2 - Mapbox</title>
 </head>
@@ -35,20 +37,23 @@
         </div>
     </nav>
     <!-- main container for responsive website, centering text -->
+    <!-- using a single column in each row for a one-column layout similar to a blog page -->
     <div class="container text-center">
 
         <div class="row">
             <div class="col">
+                <!-- header tag to put emphasis on the page title -->
                 <h1>Ecological Field Stations and Provinical Parks in Ontario</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col"><img src="fieldstation_sm.jpg" class="img-fluid" /></div>
+            <!-- use bootstrap to make the image responsive so it is visible without scrollbars on desktop and mobile -->
+            <div class="col"><img src="img/fieldstation_sm.jpg" class="img-fluid" /></div>
         </div>
         <div class="row">
             <div class="col">Data inspired by <a href="https://fieldstations.ca/stations/"
                     target="_blank">https://fieldstations.ca/stations/</a><br />
-                Mouse over a purple dot to see more information about the field stations. <br />
+                <b>Instructions: </b>Mouse over a purple dot to see more information about the field stations. <br />
                 Grey polygons represent provinical parks in Ontario.  Notice that two of the field stations 
                 are located in provincial parks.  
                 </div>

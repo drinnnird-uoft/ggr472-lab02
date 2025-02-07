@@ -33,7 +33,7 @@ map.on('load', () => {
         }
     });
 
-    // draw provincial park areas with partial transparency
+    // shade in provincial park areas with partial transparency
     map.addLayer({
         'id': 'provpark-poly',
         'type': 'fill',
